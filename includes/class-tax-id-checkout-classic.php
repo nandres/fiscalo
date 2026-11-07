@@ -96,7 +96,7 @@ class Tax_ID_Checkout_Classic {
 
 		if ( Tax_ID_Checkout_Countries::number_countries() ) {
 			$fields['number'] = array(
-				'label'    => __( 'House number', 'tax-id-checkout' ),
+				'label'    => __( 'House number', 'fiscalo' ),
 				'required' => false,
 				'hidden'   => true,
 				'class'    => array( 'form-row-wide' ),
@@ -106,7 +106,7 @@ class Tax_ID_Checkout_Classic {
 
 		if ( Tax_ID_Checkout_Countries::neighborhood_countries() ) {
 			$fields['neighborhood'] = array(
-				'label'    => __( 'Neighborhood', 'tax-id-checkout' ),
+				'label'    => __( 'Neighborhood', 'fiscalo' ),
 				'required' => false,
 				'hidden'   => true,
 				'class'    => array( 'form-row-wide' ),
@@ -139,7 +139,7 @@ class Tax_ID_Checkout_Classic {
 			$locale[ $country ]['neighborhood'] = array(
 				'hidden'   => false,
 				'required' => Tax_ID_Checkout_Settings::enabled( 'neighborhood_required' ),
-				'label'    => 'MX' === $country ? __( 'Colonia', 'tax-id-checkout' ) : __( 'Neighborhood', 'tax-id-checkout' ),
+				'label'    => 'MX' === $country ? __( 'Colonia', 'fiscalo' ) : __( 'Neighborhood', 'fiscalo' ),
 			);
 		}
 

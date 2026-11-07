@@ -1,4 +1,4 @@
-# Tax ID Checkout
+# Fiscalo – Tax ID Fields for WooCommerce
 
 [![CI](https://github.com/nandres/tax-id-checkout/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nandres/tax-id-checkout/actions/workflows/ci.yml)
 
@@ -10,7 +10,7 @@ Plugin de WooCommerce que pide el documento fiscal correcto según el país y lo
 
 *Los datos de la imagen son de demostración.*
 
-> Este repositorio tiene la **versión gratis** (1.0.0). Tax ID Checkout Pro se vende aparte y su código no está acá.
+> Este repositorio tiene la **versión gratis** (1.0.0). Fiscalo Pro se vende aparte y su código no está acá.
 
 ## Qué hace
 
@@ -26,9 +26,9 @@ WordPress 6.5, PHP 7.4 y WooCommerce 9.9 o superiores.
 
 ## Instalarlo
 
-1. Bajá el repositorio con **Code → Download ZIP** y renombrá la carpeta a `tax-id-checkout` dentro del zip.
+1. Bajá el repositorio con **Code → Download ZIP** y renombrá la carpeta a `fiscalo` dentro del zip.
 2. En WordPress, andá a **Plugins → Añadir nuevo → Subir plugin**.
-3. Activalo y configurá en **WooCommerce → Tax ID Checkout** dónde pedir el documento.
+3. Activalo y configurá en **WooCommerce → Fiscalo** dónde pedir el documento.
 
 ## Pruebas
 

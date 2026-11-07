@@ -1,6 +1,6 @@
 <?php
 /**
- * Settings storage and settings screen (WooCommerce → Tax ID Checkout).
+ * Settings storage and settings screen (WooCommerce → Fiscalo).
  *
  * @package TaxIDCheckout
  */
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 class Tax_ID_Checkout_Settings {
 
 	const OPTION = 'tax_id_checkout_settings';
-	const PAGE   = 'tax-id-checkout';
+	const PAGE   = 'fiscalo';
 
 	/**
 	 * Cached settings for the request.
@@ -43,12 +43,12 @@ class Tax_ID_Checkout_Settings {
 	public static function sections() {
 		$sections = array(
 			'taxid'   => array(
-				'title'       => __( 'Tax ID', 'tax-id-checkout' ),
-				'description' => __( 'One field that changes with the billing country: CPF or CNPJ in Brazil, RUC in Paraguay, CUIT in Argentina, RUT in Chile, RFC in Mexico, NIF in Spain, VAT number in Europe and "Tax ID" everywhere else.', 'tax-id-checkout' ),
+				'title'       => __( 'Tax ID', 'fiscalo' ),
+				'description' => __( 'One field that changes with the billing country: CPF or CNPJ in Brazil, RUC in Paraguay, CUIT in Argentina, RUT in Chile, RFC in Mexico, NIF in Spain, VAT number in Europe and "Tax ID" everywhere else.', 'fiscalo' ),
 			),
 			'address' => array(
-				'title'       => __( 'Address', 'tax-id-checkout' ),
-				'description' => __( 'Extra address fields for the countries where couriers need them.', 'tax-id-checkout' ),
+				'title'       => __( 'Address', 'fiscalo' ),
+				'description' => __( 'Extra address fields for the countries where couriers need them.', 'fiscalo' ),
 			),
 		);
 
@@ -70,90 +70,90 @@ class Tax_ID_Checkout_Settings {
 			'taxid_countries'          => array(
 				'section'     => 'taxid',
 				'type'        => 'countries',
-				'label'       => __( 'Ask in these countries', 'tax-id-checkout' ),
-				'description' => __( 'Leave empty to ask in every country.', 'tax-id-checkout' ),
+				'label'       => __( 'Ask in these countries', 'fiscalo' ),
+				'description' => __( 'Leave empty to ask in every country.', 'fiscalo' ),
 				'default'     => array(),
 			),
 			'taxid_mode'               => array(
 				'section' => 'taxid',
 				'type'    => 'select',
-				'label'   => __( 'When to ask', 'tax-id-checkout' ),
+				'label'   => __( 'When to ask', 'fiscalo' ),
 				'options' => array(
-					'always'  => __( 'Always', 'tax-id-checkout' ),
-					'invoice' => __( 'Only when the customer ticks "I need an invoice"', 'tax-id-checkout' ),
+					'always'  => __( 'Always', 'fiscalo' ),
+					'invoice' => __( 'Only when the customer ticks "I need an invoice"', 'fiscalo' ),
 				),
 				'default' => 'always',
 			),
 			'invoice_label'            => array(
 				'section'     => 'taxid',
 				'type'        => 'text',
-				'label'       => __( 'Invoice checkbox text', 'tax-id-checkout' ),
-				'description' => __( 'Used when the tax ID is only asked for invoices.', 'tax-id-checkout' ),
-				'default'     => __( 'I need an invoice', 'tax-id-checkout' ),
+				'label'       => __( 'Invoice checkbox text', 'fiscalo' ),
+				'description' => __( 'Used when the tax ID is only asked for invoices.', 'fiscalo' ),
+				'default'     => __( 'I need an invoice', 'fiscalo' ),
 			),
 			'taxid_required'           => array(
 				'section' => 'taxid',
 				'type'    => 'select',
-				'label'   => __( 'Required', 'tax-id-checkout' ),
+				'label'   => __( 'Required', 'fiscalo' ),
 				'options' => array(
-					'no'        => __( 'No, optional', 'tax-id-checkout' ),
-					'yes'       => __( 'Yes, in every country', 'tax-id-checkout' ),
-					'countries' => __( 'Only in the countries below', 'tax-id-checkout' ),
+					'no'        => __( 'No, optional', 'fiscalo' ),
+					'yes'       => __( 'Yes, in every country', 'fiscalo' ),
+					'countries' => __( 'Only in the countries below', 'fiscalo' ),
 				),
 				'default' => 'no',
 			),
 			'taxid_required_countries' => array(
 				'section' => 'taxid',
 				'type'    => 'countries',
-				'label'   => __( 'Required in', 'tax-id-checkout' ),
+				'label'   => __( 'Required in', 'fiscalo' ),
 				'default' => array(),
 			),
 			'validation'               => array(
 				'section'     => 'taxid',
 				'type'        => 'select',
-				'label'       => __( 'Validation', 'tax-id-checkout' ),
+				'label'       => __( 'Validation', 'fiscalo' ),
 				'options'     => array(
-					'strict' => __( 'Check digits (recommended)', 'tax-id-checkout' ),
-					'format' => __( 'Format only', 'tax-id-checkout' ),
-					'off'    => __( 'Off', 'tax-id-checkout' ),
+					'strict' => __( 'Check digits (recommended)', 'fiscalo' ),
+					'format' => __( 'Format only', 'fiscalo' ),
+					'off'    => __( 'Off', 'fiscalo' ),
 				),
-				'description' => __( 'Check digits catch typos in CPF, CNPJ, RUC, CUIT, RUT, NIT, NIF, Codice fiscale and more. Countries without a public rule are checked for format only.', 'tax-id-checkout' ),
+				'description' => __( 'Check digits catch typos in CPF, CNPJ, RUC, CUIT, RUT, NIT, NIF, Codice fiscale and more. Countries without a public rule are checked for format only.', 'fiscalo' ),
 				'default'     => 'strict',
 			),
 			'number_countries'         => array(
 				'section'     => 'address',
 				'type'        => 'countries',
-				'label'       => __( 'House number field', 'tax-id-checkout' ),
-				'description' => __( 'Countries where the house number gets its own field. Leave empty to never show it.', 'tax-id-checkout' ),
+				'label'       => __( 'House number field', 'fiscalo' ),
+				'description' => __( 'Countries where the house number gets its own field. Leave empty to never show it.', 'fiscalo' ),
 				'default'     => array( 'BR' ),
 			),
 			'number_required'          => array(
 				'section'        => 'address',
 				'type'           => 'checkbox',
-				'label'          => __( 'House number required', 'tax-id-checkout' ),
-				'checkbox_label' => __( 'Required (customers can type "S/N" when there is none)', 'tax-id-checkout' ),
+				'label'          => __( 'House number required', 'fiscalo' ),
+				'checkbox_label' => __( 'Required (customers can type "S/N" when there is none)', 'fiscalo' ),
 				'default'        => 'yes',
 			),
 			'neighborhood_countries'   => array(
 				'section'     => 'address',
 				'type'        => 'countries',
-				'label'       => __( 'Neighborhood field', 'tax-id-checkout' ),
-				'description' => __( 'Countries where the neighborhood (bairro, barrio, colonia) gets its own field.', 'tax-id-checkout' ),
+				'label'       => __( 'Neighborhood field', 'fiscalo' ),
+				'description' => __( 'Countries where the neighborhood (bairro, barrio, colonia) gets its own field.', 'fiscalo' ),
 				'default'     => array( 'BR' ),
 			),
 			'neighborhood_required'    => array(
 				'section'        => 'address',
 				'type'           => 'checkbox',
-				'label'          => __( 'Neighborhood required', 'tax-id-checkout' ),
-				'checkbox_label' => __( 'Required', 'tax-id-checkout' ),
+				'label'          => __( 'Neighborhood required', 'fiscalo' ),
+				'checkbox_label' => __( 'Required', 'fiscalo' ),
 				'default'        => 'yes',
 			),
 			'postcode_autofill'        => array(
 				'section'        => 'address',
 				'type'           => 'checkbox',
-				'label'          => __( 'Postcode autofill', 'tax-id-checkout' ),
-				'checkbox_label' => __( 'Fill in the address from the postcode', 'tax-id-checkout' ),
-				'description'    => __( 'Brazil: street, neighborhood, city and state (ViaCEP, with BrasilAPI as backup). About 60 other countries: city and state (Zippopotam.us). Only the postcode and country are sent, and answers are cached on your site.', 'tax-id-checkout' ),
+				'label'          => __( 'Postcode autofill', 'fiscalo' ),
+				'checkbox_label' => __( 'Fill in the address from the postcode', 'fiscalo' ),
+				'description'    => __( 'Brazil: street, neighborhood, city and state (ViaCEP, with BrasilAPI as backup). About 60 other countries: city and state (Zippopotam.us). Only the postcode and country are sent, and answers are cached on your site.', 'fiscalo' ),
 				'default'        => 'yes',
 			),
 		);
@@ -224,13 +224,13 @@ class Tax_ID_Checkout_Settings {
 	}
 
 	/**
-	 * Add WooCommerce → Tax ID Checkout.
+	 * Add WooCommerce → Fiscalo.
 	 */
 	public static function add_menu() {
 		add_submenu_page(
 			'woocommerce',
-			__( 'Tax ID Checkout', 'tax-id-checkout' ),
-			__( 'Tax ID Checkout', 'tax-id-checkout' ),
+			__( 'Fiscalo', 'fiscalo' ),
+			__( 'Fiscalo', 'fiscalo' ),
 			'manage_woocommerce',
 			self::PAGE,
 			array( __CLASS__, 'render_page' )
@@ -372,7 +372,7 @@ class Tax_ID_Checkout_Settings {
 					esc_attr( $id ),
 					esc_attr( $name ),
 					checked( 'yes', $value, false ),
-					esc_html( isset( $field['checkbox_label'] ) ? $field['checkbox_label'] : __( 'Enabled', 'tax-id-checkout' ) )
+					esc_html( isset( $field['checkbox_label'] ) ? $field['checkbox_label'] : __( 'Enabled', 'fiscalo' ) )
 				);
 				break;
 			case 'countries':
@@ -380,7 +380,7 @@ class Tax_ID_Checkout_Settings {
 					'<select id="%1$s" name="%2$s[]" multiple="multiple" class="wc-enhanced-select" style="min-width:350px;" data-placeholder="%3$s">',
 					esc_attr( $id ),
 					esc_attr( $name ),
-					esc_attr__( 'Choose countries…', 'tax-id-checkout' )
+					esc_attr__( 'Choose countries…', 'fiscalo' )
 				);
 				foreach ( WC()->countries->get_countries() as $code => $country ) {
 					printf( '<option value="%1$s" %2$s>%3$s</option>', esc_attr( $code ), selected( in_array( $code, (array) $value, true ), true, false ), esc_html( $country ) );
@@ -392,7 +392,7 @@ class Tax_ID_Checkout_Settings {
 					'<select id="%1$s" name="%2$s[]" multiple="multiple" class="wc-enhanced-select" style="min-width:350px;" data-placeholder="%3$s">',
 					esc_attr( $id ),
 					esc_attr( $name ),
-					esc_attr__( 'Choose…', 'tax-id-checkout' )
+					esc_attr__( 'Choose…', 'fiscalo' )
 				);
 				foreach ( $field['options'] as $option_value => $option_label ) {
 					printf( '<option value="%1$s" %2$s>%3$s</option>', esc_attr( $option_value ), selected( in_array( (string) $option_value, array_map( 'strval', (array) $value ), true ), true, false ), esc_html( $option_label ) );
@@ -433,7 +433,7 @@ class Tax_ID_Checkout_Settings {
 		}
 		?>
 		<div class="wrap tax-id-checkout-settings">
-			<h1><?php esc_html_e( 'Tax ID Checkout', 'tax-id-checkout' ); ?></h1>
+			<h1><?php esc_html_e( 'Fiscalo', 'fiscalo' ); ?></h1>
 			<?php settings_errors(); ?>
 			<form action="options.php" method="post">
 				<?php

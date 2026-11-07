@@ -1,4 +1,4 @@
-=== Tax ID Checkout ===
+=== Fiscalo – Tax ID Fields for WooCommerce ===
 Contributors: unandre
 Tags: cpf, cnpj, vat, tax id, checkout fields
 Requires at least: 6.5
@@ -12,7 +12,7 @@ The right tax ID field for every country (CPF/CNPJ, RUC, CUIT, RUT, RFC, NIF, VA
 
 == Description ==
 
-Selling to customers who need an invoice? Tax ID Checkout adds **one tax ID field that changes with the billing country** and checks the number before the order is placed, so you stop receiving orders with mistyped documents.
+Selling to customers who need an invoice? Fiscalo adds **one tax ID field that changes with the billing country** and checks the number before the order is placed, so you stop receiving orders with mistyped documents.
 
 * Brazil asks for **CPF or CNPJ** (including the new alphanumeric CNPJ), Paraguay for **RUC or CI**, Argentina for **CUIT, CUIL or DNI**, Chile for **RUT**, Mexico for **RFC**, Spain for **NIF / NIE / CIF**, Portugal for **NIF**, Italy for **Codice fiscale or Partita IVA**, the rest of Europe for a **VAT number**, and every other country for a generic **Tax ID**.
 * **Real check-digit validation** for CPF, CNPJ, RUC (Paraguay, Peru), CUIT/CUIL, RUT (Chile, Uruguay), CI (Uruguay), NIT (Colombia), cédula and RUC (Ecuador), NIF/NIE/CIF, Portuguese NIF, Codice fiscale and Partita IVA. Numbers are saved neatly formatted (529.982.247-25, 20-12345678-6, 12.345.678-5…).
@@ -29,16 +29,20 @@ Orders keep the same data keys used by the Brazilian Market plugin (`_billing_cp
 
 = Pro =
 
-Tax ID Checkout Pro adds:
+Fiscalo Pro adds:
 
 * **Company lookup**: type a CNPJ or an EU VAT number and the company name and address fill in by themselves. Optionally reject EU VAT numbers that VIES reports as not registered.
 * **Discount by payment method**: e.g. 10% off with bank transfer, Pix or cash, recalculated live in both checkouts.
 * **Instalments and discounted price** under every price: "or 12 × $10.00 interest-free" and "$95.00 with bank transfer".
 
+= Trademarks =
+
+WooCommerce is a trademark of Automattic Inc. Fiscalo is an independent plugin and is not affiliated with, endorsed or sponsored by Automattic or by the authors of Brazilian Market on WooCommerce.
+
 == Installation ==
 
 1. Install and activate the plugin (WooCommerce 9.9 or newer is required).
-2. Go to **WooCommerce → Tax ID Checkout**.
+2. Go to **WooCommerce → Fiscalo**.
 3. Choose where to ask for the tax ID, whether it is required, and the countries for house number and neighborhood. That's it.
 
 == Frequently Asked Questions ==
@@ -57,7 +61,7 @@ The rules follow each tax authority's published algorithm and were tested agains
 
 = I use Brazilian Market on WooCommerce. Can I switch? =
 
-Yes. Tax ID Checkout reads and writes the same order data, imports its settings and pre-fills returning customers. Deactivate Brazilian Market afterwards so the fields do not show twice.
+Yes. Fiscalo reads and writes the same order data, imports its settings and pre-fills returning customers. Deactivate Brazilian Market afterwards so the fields do not show twice.
 
 = Is personal data sent anywhere? =
 

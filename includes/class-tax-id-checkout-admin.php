@@ -28,7 +28,7 @@ class Tax_ID_Checkout_Admin {
 	 * @return string[]
 	 */
 	public static function action_links( $links ) {
-		array_unshift( $links, '<a href="' . esc_url( admin_url( 'admin.php?page=' . Tax_ID_Checkout_Settings::PAGE ) ) . '">' . esc_html__( 'Settings', 'tax-id-checkout' ) . '</a>' );
+		array_unshift( $links, '<a href="' . esc_url( admin_url( 'admin.php?page=' . Tax_ID_Checkout_Settings::PAGE ) ) . '">' . esc_html__( 'Settings', 'fiscalo' ) . '</a>' );
 		return $links;
 	}
 
@@ -44,12 +44,12 @@ class Tax_ID_Checkout_Admin {
 		if ( class_exists( 'Extra_Checkout_Fields_For_Brazil' ) ) {
 			printf(
 				'<div class="notice notice-warning"><p>%s</p></div>',
-				esc_html__( 'Tax ID Checkout already adds CPF/CNPJ, house number and neighborhood, and keeps the same order data. Deactivate "Brazilian Market on WooCommerce" so customers do not see those fields twice.', 'tax-id-checkout' )
+				esc_html__( 'Fiscalo already adds CPF/CNPJ, house number and neighborhood, and keeps the same order data. Deactivate "Brazilian Market on WooCommerce" so customers do not see those fields twice.', 'fiscalo' )
 			);
 		} elseif ( 'wcbcf' === get_option( 'tax_id_checkout_imported' ) && 'woocommerce_page_' . Tax_ID_Checkout_Settings::PAGE === $screen->id ) {
 			printf(
 				'<div class="notice notice-info is-dismissible"><p>%s</p></div>',
-				esc_html__( 'Your Brazilian Market settings were imported. Orders and customers keep their CPF, CNPJ, number and neighborhood.', 'tax-id-checkout' )
+				esc_html__( 'Your Brazilian Market settings were imported. Orders and customers keep their CPF, CNPJ, number and neighborhood.', 'fiscalo' )
 			);
 		}
 	}
@@ -63,20 +63,20 @@ class Tax_ID_Checkout_Admin {
 		}
 
 		$features = array(
-			__( 'Company lookup: type a CNPJ (Brazil) or an EU VAT number and the company name and address fill in by themselves', 'tax-id-checkout' ),
-			__( 'Discount by payment method: e.g. 10% off with bank transfer, Pix or cash, in both checkouts', 'tax-id-checkout' ),
-			__( 'Instalments and discounted price under every price: "12 × $10.00 interest-free" and "$95.00 by bank transfer"', 'tax-id-checkout' ),
+			__( 'Company lookup: type a CNPJ (Brazil) or an EU VAT number and the company name and address fill in by themselves', 'fiscalo' ),
+			__( 'Discount by payment method: e.g. 10% off with bank transfer, Pix or cash, in both checkouts', 'fiscalo' ),
+			__( 'Instalments and discounted price under every price: "12 × $10.00 interest-free" and "$95.00 by bank transfer"', 'fiscalo' ),
 		);
 		?>
 		<div class="card" style="max-width:640px;margin-top:2em;">
-			<h2><?php esc_html_e( 'Tax ID Checkout Pro', 'tax-id-checkout' ); ?></h2>
+			<h2><?php esc_html_e( 'Fiscalo Pro', 'fiscalo' ); ?></h2>
 			<ul style="list-style:disc;padding-left:1.5em;">
 				<?php foreach ( $features as $feature ) : ?>
 					<li><?php echo esc_html( $feature ); ?></li>
 				<?php endforeach; ?>
 			</ul>
 			<?php if ( Tax_ID_Checkout::upgrade_url() ) : ?>
-				<p><a class="button button-primary" href="<?php echo esc_url( Tax_ID_Checkout::upgrade_url() ); ?>"><?php esc_html_e( 'Upgrade to Pro', 'tax-id-checkout' ); ?></a></p>
+				<p><a class="button button-primary" href="<?php echo esc_url( Tax_ID_Checkout::upgrade_url() ); ?>"><?php esc_html_e( 'Upgrade to Pro', 'fiscalo' ); ?></a></p>
 			<?php endif; ?>
 		</div>
 		<?php

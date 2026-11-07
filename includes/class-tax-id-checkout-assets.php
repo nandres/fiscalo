@@ -45,7 +45,7 @@ class Tax_ID_Checkout_Assets {
 			'rest'       => esc_url_raw( rest_url( Tax_ID_Checkout_Postcode::ROUTE_NAMESPACE . '/postcode' ) ),
 			'base'       => WC()->countries->get_base_country(),
 			'i18n'       => array(
-				'optional' => __( 'optional', 'tax-id-checkout' ),
+				'optional' => __( 'optional', 'fiscalo' ),
 			),
 		);
 	}

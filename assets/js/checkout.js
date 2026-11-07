@@ -1,5 +1,5 @@
 /**
- * Tax ID Checkout: classic checkout field behaviour, formatting and postcode autofill.
+ * Fiscalo: classic checkout field behaviour, formatting and postcode autofill.
  *
  * Classic checkout: the tax ID label, example and "required" mark follow the billing country (and the
  * "I need an invoice" checkbox). Block checkout and My Account: the right field is chosen by WooCommerce
