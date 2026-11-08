@@ -1,10 +1,10 @@
 # Fiscalo – Tax ID Fields for WooCommerce
 
-[![CI](https://github.com/nandres/tax-id-checkout/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nandres/tax-id-checkout/actions/workflows/ci.yml)
+[![CI](https://github.com/nandres/fiscalo/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nandres/fiscalo/actions/workflows/ci.yml)
 
 Plugin de WooCommerce que pide el documento fiscal correcto según el país y lo valida antes de crear el pedido: CPF o CNPJ en Brasil, RUC en Paraguay, CUIT en Argentina, RFC en México, NIF en España o el número de IVA en Europa.
 
-**Página del producto:** https://tax-id-checkout-wp.vercel.app
+**Página del producto:** https://fiscalo-wp.vercel.app
 
 ![El campo cambia con el país y valida el número](docs/portada.png)
 
