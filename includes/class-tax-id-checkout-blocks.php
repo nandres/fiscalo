@@ -30,6 +30,69 @@ class Tax_ID_Checkout_Blocks {
 		add_action( 'woocommerce_set_additional_field_value', array( __CLASS__, 'mirror_customer' ), 10, 4 );
 		add_filter( 'woocommerce_admin_billing_fields', array( __CLASS__, 'remove_from_admin' ), 20 );
 		add_filter( 'woocommerce_admin_shipping_fields', array( __CLASS__, 'remove_from_admin' ), 20 );
+		add_filter( 'woocommerce_address_to_edit', array( __CLASS__, 'account_address_fields' ), 20, 2 );
+	}
+
+	/**
+	 * My Account → Addresses: WooCommerce only prints house number and neighborhood when the saved country
+	 * already uses them, and always at the end of the form. Print them for every country right after the
+	 * street lines, so the script can show or hide them as the customer changes the country.
+	 *
+	 * @param array  $address      Address fields.
+	 * @param string $address_type billing or shipping.
+	 * @return array
+	 */
+	public static function account_address_fields( $address, $address_type ) {
+		$controller = self::controller();
+		if ( ! $controller || ! is_array( $address ) || ! method_exists( $controller, 'get_fields_for_location' ) ) {
+			return $address;
+		}
+
+		$registered = $controller->get_fields_for_location( 'address' );
+		$customer   = new WC_Customer( get_current_user_id() );
+		$slugs      = array(
+			'number'       => array( Tax_ID_Checkout_Countries::number_countries(), Tax_ID_Checkout_Settings::enabled( 'number_required' ), 55 ),
+			'neighborhood' => array( Tax_ID_Checkout_Countries::neighborhood_countries(), Tax_ID_Checkout_Settings::enabled( 'neighborhood_required' ), 65 ),
+		);
+
+		foreach ( $slugs as $slug => $info ) {
+			list( $countries, $required, $priority ) = $info;
+			$key = self::NS . '/' . $slug;
+			if ( ! $countries || ! isset( $registered[ $key ] ) ) {
+				continue;
+			}
+
+			$field_key = CheckoutFields::get_group_key( $address_type ) . $key;
+			if ( ! isset( $address[ $field_key ] ) ) {
+				$field          = $registered[ $key ];
+				$field['value'] = method_exists( $controller, 'get_field_from_object' )
+					? $controller->get_field_from_object( $key, $customer, $address_type )
+					: $customer->get_meta( $field_key );
+				$field          = $controller->prepare_form_field( $field );
+			} else {
+				$field = $address[ $field_key ];
+			}
+
+			$attributes                          = isset( $field['custom_attributes'] ) ? (array) $field['custom_attributes'] : array();
+			$attributes['data-tax-id-address']   = $address_type;
+			$attributes['data-tax-id-countries'] = implode( ',', $countries );
+
+			$field['required']          = (bool) $required;
+			$field['priority']          = $priority;
+			$field['custom_attributes'] = $attributes;
+			$address[ $field_key ]      = $field;
+		}
+
+		uasort(
+			$address,
+			static function ( $a, $b ) {
+				$pa = isset( $a['priority'] ) ? (int) $a['priority'] : 1000;
+				$pb = isset( $b['priority'] ) ? (int) $b['priority'] : 1000;
+				return $pa <=> $pb;
+			}
+		);
+
+		return $address;
 	}
 
 	/**

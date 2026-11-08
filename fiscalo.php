@@ -61,7 +61,7 @@ if ( tax_id_checkout_fs_is_configured() && ! function_exists( 'tax_id_checkout_f
 				array(
 					'id'                  => TAX_ID_CHECKOUT_FS_ID,
 					'slug'                => 'fiscalo',
-					'premium_slug'        => 'tax-id-checkout-pro',
+					'premium_slug'        => 'fiscalo-premium',
 					'type'                => 'plugin',
 					'public_key'          => TAX_ID_CHECKOUT_FS_PUBLIC_KEY,
 					'is_premium'          => false,

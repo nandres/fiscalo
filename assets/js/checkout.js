@@ -196,6 +196,35 @@
 		$( document ).on( 'change', '#billing_country, #billing_invoice', syncClassic );
 	}
 
+	/* ---------- My Account → Addresses: house number and neighborhood per country ---------- */
+
+	function accountField( type, slug ) {
+		return $( '[data-tax-id-address="' + type + '"]' ).filter( function () {
+			return new RegExp( '/' + slug + '$' ).test( this.name || '' );
+		} );
+	}
+
+	function syncAccountAddress() {
+		$( '[data-tax-id-address]' ).each( function () {
+			var $input = $( this );
+			var country = $( '#' + $input.attr( 'data-tax-id-address' ) + '_country' ).val() || '';
+			var countries = ( $input.attr( 'data-tax-id-countries' ) || '' ).split( ',' );
+			var show = has( countries, country );
+			var $row = $input.closest( '.form-row' );
+
+			$row.toggle( show );
+			$input.prop( 'disabled', ! show );
+			if ( ! show ) {
+				$row.removeClass( 'woocommerce-invalid woocommerce-invalid-required-field' );
+			}
+		} );
+	}
+
+	if ( $ ) {
+		$( syncAccountAddress );
+		$( document ).on( 'change', '#billing_country, #shipping_country', syncAccountAddress );
+	}
+
 	/* ---------- Postcode autofill ---------- */
 
 	var looked = {};
@@ -247,6 +276,7 @@
 			}
 			if ( data.neighborhood ) {
 				$( '#' + type + '_neighborhood' ).val( data.neighborhood );
+				accountField( type, 'neighborhood' ).val( data.neighborhood );
 			}
 			if ( data.city ) {
 				$( '#' + type + '_city' ).val( data.city );
@@ -256,6 +286,8 @@
 			}
 			if ( data.address_1 && $( '#' + type + '_number' ).is( ':visible' ) ) {
 				$( '#' + type + '_number' ).trigger( 'focus' );
+			} else if ( data.address_1 && accountField( type, 'number' ).is( ':visible' ) ) {
+				accountField( type, 'number' ).trigger( 'focus' );
 			}
 			$( document.body ).trigger( 'update_checkout' );
 		} );
