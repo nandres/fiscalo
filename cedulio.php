@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       Fiscalo – Tax ID Fields for WooCommerce
- * Plugin URI:        https://wordpress.org/plugins/fiscalo/
+ * Plugin Name:       Cedulio – Tax ID Fields for WooCommerce
+ * Plugin URI:        https://wordpress.org/plugins/cedulio/
  * Description:       Ask for the right tax ID in every country (CPF/CNPJ, RUC, CUIT, RUT, RFC, NIF, VAT number…) with real check-digit validation, plus house number, neighborhood and postcode autofill. Works with the block and the classic checkout.
  * Version:           1.0.0
  * Requires at least: 6.5
@@ -11,7 +11,7 @@
  * Author URI:        https://marcos-arellano.vercel.app
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       fiscalo
+ * Text Domain:       cedulio
  * Domain Path:       /languages
  * WC requires at least: 9.9
  * WC tested up to:   11.2
@@ -60,8 +60,8 @@ if ( tax_id_checkout_fs_is_configured() && ! function_exists( 'tax_id_checkout_f
 			$tax_id_checkout_fs = fs_dynamic_init(
 				array(
 					'id'                  => TAX_ID_CHECKOUT_FS_ID,
-					'slug'                => 'fiscalo',
-					'premium_slug'        => 'fiscalo-premium',
+					'slug'                => 'cedulio',
+					'premium_slug'        => 'cedulio-premium',
 					'type'                => 'plugin',
 					'public_key'          => TAX_ID_CHECKOUT_FS_PUBLIC_KEY,
 					'is_premium'          => false,
@@ -71,8 +71,8 @@ if ( tax_id_checkout_fs_is_configured() && ! function_exists( 'tax_id_checkout_f
 					'has_paid_plans'      => true,
 					'is_org_compliant'    => true,
 					'menu'                => array(
-						'slug'       => 'fiscalo',
-						'first-path' => 'admin.php?page=fiscalo',
+						'slug'       => 'cedulio',
+						'first-path' => 'admin.php?page=cedulio',
 						'contact'    => false,
 						'support'    => false,
 						'parent'     => array(

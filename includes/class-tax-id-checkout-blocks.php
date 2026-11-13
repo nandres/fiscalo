@@ -237,7 +237,7 @@ class Tax_ID_Checkout_Blocks {
 					'id'                         => self::NS . '/' . $slug,
 					'label'                      => $group['label'],
 					/* translators: %s: field name, e.g. "RUT". */
-					'optionalLabel'              => sprintf( __( '%s (optional)', 'fiscalo' ), $group['label'] ),
+					'optionalLabel'              => sprintf( __( '%s (optional)', 'cedulio' ), $group['label'] ),
 					'location'                   => 'contact',
 					'type'                       => 'text',
 					'required'                   => $is_required,
@@ -276,8 +276,8 @@ class Tax_ID_Checkout_Blocks {
 			woocommerce_register_additional_checkout_field( $invoice );
 		}
 
-		self::register_address_field( 'number', __( 'House number', 'fiscalo' ), Tax_ID_Checkout_Countries::number_countries(), Tax_ID_Checkout_Settings::enabled( 'number_required' ) );
-		self::register_address_field( 'neighborhood', __( 'Neighborhood', 'fiscalo' ), Tax_ID_Checkout_Countries::neighborhood_countries(), Tax_ID_Checkout_Settings::enabled( 'neighborhood_required' ) );
+		self::register_address_field( 'number', __( 'House number', 'cedulio' ), Tax_ID_Checkout_Countries::number_countries(), Tax_ID_Checkout_Settings::enabled( 'number_required' ) );
+		self::register_address_field( 'neighborhood', __( 'Neighborhood', 'cedulio' ), Tax_ID_Checkout_Countries::neighborhood_countries(), Tax_ID_Checkout_Settings::enabled( 'neighborhood_required' ) );
 	}
 
 	/**
@@ -298,7 +298,7 @@ class Tax_ID_Checkout_Blocks {
 				'id'                         => self::NS . '/' . $slug,
 				'label'                      => $label,
 				/* translators: %s: field name, e.g. "Neighborhood". */
-				'optionalLabel'              => sprintf( __( '%s (optional)', 'fiscalo' ), $label ),
+				'optionalLabel'              => sprintf( __( '%s (optional)', 'cedulio' ), $label ),
 				'location'                   => 'address',
 				'type'                       => 'text',
 				'required'                   => $required ? self::country_rule( 'in', $countries, 'address' ) : false,
@@ -362,7 +362,7 @@ class Tax_ID_Checkout_Blocks {
 		return new WP_Error(
 			'tax_id_checkout_invalid',
 			/* translators: %s: field name, e.g. "CPF or CNPJ". */
-			sprintf( __( 'The %s you entered is not valid. Please check the number.', 'fiscalo' ), $groups[ $slug ]['label'] )
+			sprintf( __( 'The %s you entered is not valid. Please check the number.', 'cedulio' ), $groups[ $slug ]['label'] )
 		);
 	}
 

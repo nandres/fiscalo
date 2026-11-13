@@ -26,27 +26,27 @@ class Tax_ID_Checkout_Countries {
 	 */
 	public static function named() {
 		$countries = array(
-			'BR' => array( __( 'CPF or CNPJ', 'fiscalo' ), '000.000.000-00' ),
-			'PY' => array( __( 'RUC or CI', 'fiscalo' ), '1234567-8' ),
-			'AR' => array( __( 'CUIT, CUIL or DNI', 'fiscalo' ), '20-12345678-6' ),
-			'CL' => array( __( 'RUT', 'fiscalo' ), '12.345.678-5' ),
-			'UY' => array( __( 'RUT or CI', 'fiscalo' ), '1.234.567-2' ),
-			'PE' => array( __( 'RUC or DNI', 'fiscalo' ), '20123456789' ),
-			'CO' => array( __( 'NIT or ID number (cédula)', 'fiscalo' ), '900.123.456-7' ),
-			'EC' => array( __( 'RUC or ID number (cédula)', 'fiscalo' ), '1712345678' ),
-			'BO' => array( __( 'NIT or CI', 'fiscalo' ), '1234567' ),
-			'VE' => array( __( 'RIF', 'fiscalo' ), 'J-12345678-9' ),
-			'MX' => array( __( 'RFC', 'fiscalo' ), 'XAXX010101000' ),
-			'GT' => array( __( 'NIT', 'fiscalo' ), '1234567-8' ),
-			'SV' => array( __( 'NIT or DUI', 'fiscalo' ), '01234567-8' ),
-			'HN' => array( __( 'RTN', 'fiscalo' ), '08011999123456' ),
-			'NI' => array( __( 'RUC', 'fiscalo' ), 'J0310000000000' ),
-			'CR' => array( __( 'ID number (cédula)', 'fiscalo' ), '1-2345-6789' ),
-			'PA' => array( __( 'RUC', 'fiscalo' ), '8-123-456' ),
-			'DO' => array( __( 'RNC or ID number (cédula)', 'fiscalo' ), '101-01234-5' ),
-			'ES' => array( __( 'NIF / NIE / CIF', 'fiscalo' ), '12345678Z' ),
-			'PT' => array( __( 'NIF', 'fiscalo' ), '123456789' ),
-			'IT' => array( __( 'Codice fiscale or Partita IVA', 'fiscalo' ), 'RSSMRA80A01H501U' ),
+			'BR' => array( __( 'CPF or CNPJ', 'cedulio' ), '000.000.000-00' ),
+			'PY' => array( __( 'RUC or CI', 'cedulio' ), '1234567-8' ),
+			'AR' => array( __( 'CUIT, CUIL or DNI', 'cedulio' ), '20-12345678-6' ),
+			'CL' => array( __( 'RUT', 'cedulio' ), '12.345.678-5' ),
+			'UY' => array( __( 'RUT or CI', 'cedulio' ), '1.234.567-2' ),
+			'PE' => array( __( 'RUC or DNI', 'cedulio' ), '20123456789' ),
+			'CO' => array( __( 'NIT or ID number (cédula)', 'cedulio' ), '900.123.456-7' ),
+			'EC' => array( __( 'RUC or ID number (cédula)', 'cedulio' ), '1712345678' ),
+			'BO' => array( __( 'NIT or CI', 'cedulio' ), '1234567' ),
+			'VE' => array( __( 'RIF', 'cedulio' ), 'J-12345678-9' ),
+			'MX' => array( __( 'RFC', 'cedulio' ), 'XAXX010101000' ),
+			'GT' => array( __( 'NIT', 'cedulio' ), '1234567-8' ),
+			'SV' => array( __( 'NIT or DUI', 'cedulio' ), '01234567-8' ),
+			'HN' => array( __( 'RTN', 'cedulio' ), '08011999123456' ),
+			'NI' => array( __( 'RUC', 'cedulio' ), 'J0310000000000' ),
+			'CR' => array( __( 'ID number (cédula)', 'cedulio' ), '1-2345-6789' ),
+			'PA' => array( __( 'RUC', 'cedulio' ), '8-123-456' ),
+			'DO' => array( __( 'RNC or ID number (cédula)', 'cedulio' ), '101-01234-5' ),
+			'ES' => array( __( 'NIF / NIE / CIF', 'cedulio' ), '12345678Z' ),
+			'PT' => array( __( 'NIF', 'cedulio' ), '123456789' ),
+			'IT' => array( __( 'Codice fiscale or Partita IVA', 'cedulio' ), 'RSSMRA80A01H501U' ),
 		);
 
 		$named = array();
@@ -78,12 +78,12 @@ class Tax_ID_Checkout_Countries {
 		}
 		if ( in_array( $country, self::VAT, true ) ) {
 			return array(
-				'label'       => __( 'VAT number', 'fiscalo' ),
+				'label'       => __( 'VAT number', 'cedulio' ),
 				'placeholder' => ( 'GR' === $country ? 'EL' : $country ) . '…',
 			);
 		}
 		return array(
-			'label'       => __( 'Tax ID', 'fiscalo' ),
+			'label'       => __( 'Tax ID', 'cedulio' ),
 			'placeholder' => '',
 		);
 	}
@@ -125,12 +125,12 @@ class Tax_ID_Checkout_Countries {
 			$groups[ strtolower( $code ) ] = $country + array( 'countries' => array( $code ) );
 		}
 		$groups['vat']   = array(
-			'label'       => __( 'VAT number', 'fiscalo' ),
+			'label'       => __( 'VAT number', 'cedulio' ),
 			'placeholder' => '',
 			'countries'   => self::VAT,
 		);
 		$groups['other'] = array(
-			'label'       => __( 'Tax ID', 'fiscalo' ),
+			'label'       => __( 'Tax ID', 'cedulio' ),
 			'placeholder' => '',
 			'countries'   => null,
 		);

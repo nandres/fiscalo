@@ -1,107 +1,107 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Fiscalo 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fiscalo\n"
+"Project-Id-Version: Cedulio 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cedulio\n"
 "POT-Creation-Date: 2026-10-31T05:18:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: pt_BR\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Domain: fiscalo\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Domain: cedulio\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
-#: fiscalo.php includes/class-tax-id-checkout-settings.php:232
+#: cedulio.php includes/class-tax-id-checkout-settings.php:232
 #: includes/class-tax-id-checkout-settings.php:233
 #: includes/class-tax-id-checkout-settings.php:436
-msgid "Fiscalo"
-msgstr "Fiscalo"
+msgid "Cedulio"
+msgstr "Cedulio"
 
 #. Plugin URI of the plugin
-#: fiscalo.php
-msgid "https://wordpress.org/plugins/fiscalo/"
-msgstr "https://br.wordpress.org/plugins/tax-id-checkout/"
+#: cedulio.php
+msgid "https://wordpress.org/plugins/cedulio/"
+msgstr "https://es.wordpress.org/plugins/tax-id-checkout/"
 
 #. Description of the plugin
-#: fiscalo.php
+#: cedulio.php
 msgid ""
 "Ask for the right tax ID in every country (CPF/CNPJ, RUC, CUIT, RUT, RFC, "
 "NIF, VAT number…) with real check-digit validation, plus house number, "
 "neighborhood and postcode autofill. Works with the block and the classic "
 "checkout."
 msgstr ""
-"Peça o documento fiscal certo em cada país (CPF/CNPJ, RUC, CUIT, RUT, RFC, "
-"NIF, número de IVA…) com validação real do dígito verificador, além de "
-"número, bairro e preenchimento automático pelo CEP. Funciona com o checkout "
-"em blocos e o clássico."
+"Pide el documento fiscal correcto en cada país (CPF/CNPJ, RUC, CUIT, RUT, "
+"RFC, NIF, número de IVA…) con validación real del dígito verificador, además"
+" de número de casa, barrio y autocompletado por código postal. Funciona con "
+"el checkout de bloques y el clásico."
 
 #. Author of the plugin
-#: fiscalo.php
+#: cedulio.php
 msgid "Marcos Arellano"
 msgstr "Marcos Arellano"
 
 #. Author URI of the plugin
-#: fiscalo.php
+#: cedulio.php
 msgid "https://marcos-arellano.vercel.app"
 msgstr "https://marcos-arellano.vercel.app"
 
 #: includes/class-tax-id-checkout-admin.php:31
 msgid "Settings"
-msgstr "Configurações"
+msgstr "Ajustes"
 
 #: includes/class-tax-id-checkout-admin.php:47
 msgid ""
-"Fiscalo already adds CPF/CNPJ, house number and neighborhood, and "
+"Cedulio already adds CPF/CNPJ, house number and neighborhood, and "
 "keeps the same order data. Deactivate \"Brazilian Market on WooCommerce\" so"
 " customers do not see those fields twice."
 msgstr ""
-"O Fiscalo já adiciona CPF/CNPJ, número e bairro, e mantém os mesmos "
-"dados do pedido. Desative o \"Brazilian Market on WooCommerce\" para que "
-"seus clientes não vejam esses campos duas vezes."
+"Cedulio ya agrega CPF/CNPJ, número y barrio, y guarda los mismos "
+"datos del pedido. Desactiva \"Brazilian Market on WooCommerce\" para que tus"
+" clientes no vean esos campos dos veces."
 
 #: includes/class-tax-id-checkout-admin.php:52
 msgid ""
 "Your Brazilian Market settings were imported. Orders and customers keep "
 "their CPF, CNPJ, number and neighborhood."
 msgstr ""
-"Suas configurações do Brazilian Market foram importadas. Pedidos e clientes "
-"mantêm CPF, CNPJ, número e bairro."
+"Se importaron tus ajustes de Brazilian Market. Los pedidos y clientes "
+"conservan su CPF, CNPJ, número y barrio."
 
 #: includes/class-tax-id-checkout-admin.php:66
 msgid ""
 "Company lookup: type a CNPJ (Brazil) or an EU VAT number and the company "
 "name and address fill in by themselves"
 msgstr ""
-"Consulta de empresa: digite um CNPJ ou um número de IVA da UE e a razão "
-"social e o endereço são preenchidos sozinhos"
+"Búsqueda de empresa: escribe un CNPJ (Brasil) o un número de IVA de la UE y "
+"la razón social y la dirección se completan solas"
 
 #: includes/class-tax-id-checkout-admin.php:67
 msgid ""
 "Discount by payment method: e.g. 10% off with bank transfer, Pix or cash, in"
 " both checkouts"
 msgstr ""
-"Desconto por forma de pagamento: por exemplo 10% com transferência, Pix ou "
-"dinheiro, nos dois checkouts"
+"Descuento por método de pago: por ejemplo 10% menos con transferencia, Pix o"
+" efectivo, en ambos checkouts"
 
 #: includes/class-tax-id-checkout-admin.php:68
 msgid ""
 "Instalments and discounted price under every price: \"12 × $10.00 interest-"
 "free\" and \"$95.00 by bank transfer\""
 msgstr ""
-"Parcelas e preço com desconto embaixo de cada preço: \"12x de R$ 10,00 sem "
-"juros\" e \"R$ 95,00 no Pix\""
+"Cuotas y precio con descuento debajo de cada precio: \"12 cuotas de $10,00 "
+"sin interés\" y \"$95,00 con transferencia\""
 
 #: includes/class-tax-id-checkout-admin.php:72
-msgid "Fiscalo Pro"
-msgstr "Fiscalo Pro"
+msgid "Cedulio Pro"
+msgstr "Cedulio Pro"
 
 #: includes/class-tax-id-checkout-admin.php:79
 msgid "Upgrade to Pro"
-msgstr "Fazer upgrade para o Pro"
+msgstr "Pasar a Pro"
 
 #: includes/class-tax-id-checkout-assets.php:48
 msgid "optional"
@@ -130,14 +130,14 @@ msgstr "Número"
 #: includes/class-tax-id-checkout-display.php:120
 #: includes/class-tax-id-checkout-display.php:134
 msgid "Neighborhood"
-msgstr "Bairro"
+msgstr "Barrio"
 
 #. translators: %s: field name, e.g. "CPF or CNPJ".
 #: includes/class-tax-id-checkout-blocks.php:302
 #: includes/class-tax-id-checkout-data.php:71
 #, php-format
 msgid "The %s you entered is not valid. Please check the number."
-msgstr "O %s informado não é válido. Confira o número."
+msgstr "El %s que ingresaste no es válido. Revisa el número."
 
 #: includes/class-tax-id-checkout-classic.php:142
 msgid "Colonia"
@@ -145,15 +145,15 @@ msgstr "Colonia"
 
 #: includes/class-tax-id-checkout-countries.php:29
 msgid "CPF or CNPJ"
-msgstr "CPF ou CNPJ"
+msgstr "CPF o CNPJ"
 
 #: includes/class-tax-id-checkout-countries.php:30
 msgid "RUC or CI"
-msgstr "RUC ou CI"
+msgstr "RUC o CI"
 
 #: includes/class-tax-id-checkout-countries.php:31
 msgid "CUIT, CUIL or DNI"
-msgstr "CUIT, CUIL ou DNI"
+msgstr "CUIT, CUIL o DNI"
 
 #: includes/class-tax-id-checkout-countries.php:32
 msgid "RUT"
@@ -161,23 +161,23 @@ msgstr "RUT"
 
 #: includes/class-tax-id-checkout-countries.php:33
 msgid "RUT or CI"
-msgstr "RUT ou CI"
+msgstr "RUT o CI"
 
 #: includes/class-tax-id-checkout-countries.php:34
 msgid "RUC or DNI"
-msgstr "RUC ou DNI"
+msgstr "RUC o DNI"
 
 #: includes/class-tax-id-checkout-countries.php:35
 msgid "NIT or ID number (cédula)"
-msgstr "NIT ou cédula"
+msgstr "NIT o cédula"
 
 #: includes/class-tax-id-checkout-countries.php:36
 msgid "RUC or ID number (cédula)"
-msgstr "RUC ou cédula"
+msgstr "RUC o cédula"
 
 #: includes/class-tax-id-checkout-countries.php:37
 msgid "NIT or CI"
-msgstr "NIT ou CI"
+msgstr "NIT o CI"
 
 #: includes/class-tax-id-checkout-countries.php:38
 msgid "RIF"
@@ -193,7 +193,7 @@ msgstr "NIT"
 
 #: includes/class-tax-id-checkout-countries.php:41
 msgid "NIT or DUI"
-msgstr "NIT ou DUI"
+msgstr "NIT o DUI"
 
 #: includes/class-tax-id-checkout-countries.php:42
 msgid "RTN"
@@ -210,7 +210,7 @@ msgstr "Cédula"
 
 #: includes/class-tax-id-checkout-countries.php:46
 msgid "RNC or ID number (cédula)"
-msgstr "RNC ou cédula"
+msgstr "RNC o cédula"
 
 #: includes/class-tax-id-checkout-countries.php:47
 msgid "NIF / NIE / CIF"
@@ -222,13 +222,13 @@ msgstr "NIF"
 
 #: includes/class-tax-id-checkout-countries.php:49
 msgid "Codice fiscale or Partita IVA"
-msgstr "Codice fiscale ou Partita IVA"
+msgstr "Codice fiscale o Partita IVA"
 
 #: includes/class-tax-id-checkout-countries.php:81
 #: includes/class-tax-id-checkout-countries.php:128
 #: includes/class-tax-id-checkout-data.php:242
 msgid "VAT number"
-msgstr "Número de IVA (VAT)"
+msgstr "Número de IVA"
 
 #: includes/class-tax-id-checkout-countries.php:86
 #: includes/class-tax-id-checkout-countries.php:133
@@ -236,25 +236,25 @@ msgstr "Número de IVA (VAT)"
 #: includes/class-tax-id-checkout-display.php:121
 #: includes/class-tax-id-checkout-settings.php:46
 msgid "Tax ID"
-msgstr "Documento fiscal"
+msgstr "Identificación fiscal"
 
 #. translators: %s: field name, e.g. "CPF or CNPJ".
 #: includes/class-tax-id-checkout-data.php:66
 #, php-format
 msgid "%s is a required field."
-msgstr "%s é um campo obrigatório."
+msgstr "%s es un campo obligatorio."
 
 #: includes/class-tax-id-checkout-display.php:48
 msgid "Invoice requested"
-msgstr "Pediu nota fiscal"
+msgstr "Pidió factura"
 
 #: includes/class-tax-id-checkout-display.php:52
 msgid "Yes"
-msgstr "Sim"
+msgstr "Sí"
 
 #: includes/class-tax-id-checkout-display.php:53
 msgid "No"
-msgstr "Não"
+msgstr "No"
 
 #: includes/class-tax-id-checkout-settings.php:47
 msgid ""
@@ -262,76 +262,76 @@ msgid ""
 "in Paraguay, CUIT in Argentina, RUT in Chile, RFC in Mexico, NIF in Spain, "
 "VAT number in Europe and \"Tax ID\" everywhere else."
 msgstr ""
-"Um só campo que muda com o país de cobrança: CPF ou CNPJ no Brasil, RUC no "
-"Paraguai, CUIT na Argentina, RUT no Chile, RFC no México, NIF na Espanha, "
-"número de IVA na Europa e \"Documento fiscal\" no resto."
+"Un solo campo que cambia con el país de facturación: CPF o CNPJ en Brasil, "
+"RUC en Paraguay, CUIT en Argentina, RUT en Chile, RFC en México, NIF en "
+"España, número de IVA en Europa e \"Identificación fiscal\" en el resto."
 
 #: includes/class-tax-id-checkout-settings.php:50
 msgid "Address"
-msgstr "Endereço"
+msgstr "Dirección"
 
 #: includes/class-tax-id-checkout-settings.php:51
 msgid "Extra address fields for the countries where couriers need them."
 msgstr ""
-"Campos extras de endereço para os países onde as transportadoras precisam "
-"deles."
+"Campos de dirección extra para los países donde las transportadoras los "
+"necesitan."
 
 #: includes/class-tax-id-checkout-settings.php:73
 msgid "Ask in these countries"
-msgstr "Pedir nestes países"
+msgstr "Pedir en estos países"
 
 #: includes/class-tax-id-checkout-settings.php:74
 msgid "Leave empty to ask in every country."
-msgstr "Deixe vazio para pedir em todos os países."
+msgstr "Déjalo vacío para pedirlo en todos los países."
 
 #: includes/class-tax-id-checkout-settings.php:80
 msgid "When to ask"
-msgstr "Quando pedir"
+msgstr "Cuándo pedirlo"
 
 #: includes/class-tax-id-checkout-settings.php:82
 msgid "Always"
-msgstr "Sempre"
+msgstr "Siempre"
 
 #: includes/class-tax-id-checkout-settings.php:83
 msgid "Only when the customer ticks \"I need an invoice\""
-msgstr "Só quando o cliente marca \"Preciso de nota fiscal\""
+msgstr "Solo cuando el cliente marca \"Necesito factura\""
 
 #: includes/class-tax-id-checkout-settings.php:90
 msgid "Invoice checkbox text"
-msgstr "Texto da caixa de nota fiscal"
+msgstr "Texto de la casilla de factura"
 
 #: includes/class-tax-id-checkout-settings.php:91
 msgid "Used when the tax ID is only asked for invoices."
-msgstr "Usado quando o documento só é pedido para emitir nota."
+msgstr "Se usa cuando el documento solo se pide para facturar."
 
 #: includes/class-tax-id-checkout-settings.php:92
 msgid "I need an invoice"
-msgstr "Preciso de nota fiscal"
+msgstr "Necesito factura"
 
 #: includes/class-tax-id-checkout-settings.php:97
 #: includes/class-tax-id-checkout-settings.php:148
 msgid "Required"
-msgstr "Obrigatório"
+msgstr "Obligatorio"
 
 #: includes/class-tax-id-checkout-settings.php:99
 msgid "No, optional"
-msgstr "Não, opcional"
+msgstr "No, opcional"
 
 #: includes/class-tax-id-checkout-settings.php:100
 msgid "Yes, in every country"
-msgstr "Sim, em todos os países"
+msgstr "Sí, en todos los países"
 
 #: includes/class-tax-id-checkout-settings.php:101
 msgid "Only in the countries below"
-msgstr "Só nos países abaixo"
+msgstr "Solo en los países de abajo"
 
 #: includes/class-tax-id-checkout-settings.php:108
 msgid "Required in"
-msgstr "Obrigatório em"
+msgstr "Obligatorio en"
 
 #: includes/class-tax-id-checkout-settings.php:114
 msgid "Validation"
-msgstr "Validação"
+msgstr "Validación"
 
 #: includes/class-tax-id-checkout-settings.php:116
 msgid "Check digits (recommended)"
@@ -339,11 +339,11 @@ msgstr "Dígito verificador (recomendado)"
 
 #: includes/class-tax-id-checkout-settings.php:117
 msgid "Format only"
-msgstr "Só formato"
+msgstr "Solo formato"
 
 #: includes/class-tax-id-checkout-settings.php:118
 msgid "Off"
-msgstr "Desativada"
+msgstr "Desactivada"
 
 #: includes/class-tax-id-checkout-settings.php:120
 msgid ""
@@ -351,9 +351,9 @@ msgid ""
 "fiscale and more. Countries without a public rule are checked for format "
 "only."
 msgstr ""
-"O dígito verificador pega erros de digitação em CPF, CNPJ, RUC, CUIT, RUT, "
-"NIT, NIF, Codice fiscale e mais. Nos países sem regra pública só o formato é"
-" conferido."
+"El dígito verificador detecta errores de tipeo en CPF, CNPJ, RUC, CUIT, RUT,"
+" NIT, NIF, Codice fiscale y más. En los países sin una regla pública solo se"
+" revisa el formato."
 
 #: includes/class-tax-id-checkout-settings.php:126
 msgid "House number field"
@@ -364,37 +364,39 @@ msgid ""
 "Countries where the house number gets its own field. Leave empty to never "
 "show it."
 msgstr ""
-"Países onde o número tem um campo próprio. Deixe vazio para nunca mostrar."
+"Países donde el número de casa tiene su propio campo. Déjalo vacío para no "
+"mostrarlo nunca."
 
 #: includes/class-tax-id-checkout-settings.php:133
 msgid "House number required"
-msgstr "Número obrigatório"
+msgstr "Número obligatorio"
 
 #: includes/class-tax-id-checkout-settings.php:134
 msgid "Required (customers can type \"S/N\" when there is none)"
-msgstr "Obrigatório (o cliente pode digitar \"S/N\" quando não houver)"
+msgstr "Obligatorio (pueden escribir \"S/N\" si no tiene)"
 
 #: includes/class-tax-id-checkout-settings.php:140
 msgid "Neighborhood field"
-msgstr "Campo de bairro"
+msgstr "Campo de barrio"
 
 #: includes/class-tax-id-checkout-settings.php:141
 msgid ""
 "Countries where the neighborhood (bairro, barrio, colonia) gets its own "
 "field."
-msgstr "Países onde o bairro (bairro, barrio, colonia) tem um campo próprio."
+msgstr ""
+"Países donde el barrio (bairro, barrio, colonia) tiene su propio campo."
 
 #: includes/class-tax-id-checkout-settings.php:147
 msgid "Neighborhood required"
-msgstr "Bairro obrigatório"
+msgstr "Barrio obligatorio"
 
 #: includes/class-tax-id-checkout-settings.php:154
 msgid "Postcode autofill"
-msgstr "Preenchimento pelo CEP"
+msgstr "Autocompletar por código postal"
 
 #: includes/class-tax-id-checkout-settings.php:155
 msgid "Fill in the address from the postcode"
-msgstr "Preencher o endereço a partir do CEP"
+msgstr "Completar la dirección a partir del código postal"
 
 #: includes/class-tax-id-checkout-settings.php:156
 msgid ""
@@ -402,184 +404,185 @@ msgid ""
 "backup). About 60 other countries: city and state (Zippopotam.us). Only the "
 "postcode and country are sent, and answers are cached on your site."
 msgstr ""
-"Brasil: rua, bairro, cidade e estado (ViaCEP, com BrasilAPI de reserva). "
-"Cerca de 60 outros países: cidade e estado (Zippopotam.us). Só o CEP e o "
-"país são enviados, e as respostas ficam guardadas no seu site."
+"Brasil: calle, barrio, ciudad y estado (ViaCEP, con BrasilAPI de respaldo). "
+"Unos 60 países más: ciudad y estado (Zippopotam.us). Solo se envían el "
+"código postal y el país, y las respuestas se guardan en tu sitio."
 
 #: includes/class-tax-id-checkout-settings.php:375
 msgid "Enabled"
-msgstr "Ativado"
+msgstr "Activado"
 
 #: includes/class-tax-id-checkout-settings.php:383
 msgid "Choose countries…"
-msgstr "Escolha os países…"
+msgstr "Elige países…"
 
 #: includes/class-tax-id-checkout-settings.php:395
 msgid "Choose…"
-msgstr "Escolha…"
+msgstr "Elige…"
 
 #: includes/class-tax-id-checkout.php:115
-msgid "Fiscalo needs WooCommerce to be installed and active."
-msgstr "O Fiscalo precisa do WooCommerce instalado e ativo."
+msgid "Cedulio needs WooCommerce to be installed and active."
+msgstr "Cedulio necesita que WooCommerce esté instalado y activo."
 
 #: includes/pro/class-tax-id-checkout-pro-discount.php:37
 msgid "Discount by payment method (Pro)"
-msgstr "Desconto por forma de pagamento (Pro)"
+msgstr "Descuento por método de pago (Pro)"
 
 #: includes/pro/class-tax-id-checkout-pro-discount.php:38
 msgid ""
 "For example 10% off when paying by bank transfer, Pix or cash. Shown as a "
 "line in the order totals."
 msgstr ""
-"Por exemplo 10% de desconto pagando com transferência, Pix ou dinheiro. "
-"Aparece como uma linha nos totais do pedido."
+"Por ejemplo 10% menos al pagar con transferencia, Pix o efectivo. Se muestra"
+" como una línea en los totales del pedido."
 
 #: includes/pro/class-tax-id-checkout-pro-discount.php:60
 msgid "Payment methods"
-msgstr "Formas de pagamento"
+msgstr "Métodos de pago"
 
 #: includes/pro/class-tax-id-checkout-pro-discount.php:67
 msgid "Discount (%)"
-msgstr "Desconto (%)"
+msgstr "Descuento (%)"
 
 #: includes/pro/class-tax-id-checkout-pro-discount.php:68
 msgid ""
 "Applied to the products (after coupons), not to shipping. 0 turns it off."
-msgstr "Aplicado aos produtos (depois dos cupons), não ao frete. 0 desativa."
+msgstr ""
+"Se aplica a los productos (después de los cupones), no al envío. 0 lo "
+"desactiva."
 
 #: includes/pro/class-tax-id-checkout-pro-discount.php:74
 msgid "Line name in the totals"
-msgstr "Nome da linha nos totais"
+msgstr "Nombre de la línea en los totales"
 
 #: includes/pro/class-tax-id-checkout-pro-discount.php:75
 msgid "Payment method discount"
-msgstr "Desconto pela forma de pagamento"
+msgstr "Descuento por método de pago"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:33
 msgid "Instalments and discounted price (Pro)"
-msgstr "Parcelas e preço com desconto (Pro)"
+msgstr "Cuotas y precio con descuento (Pro)"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:34
 msgid ""
 "Shown under the price in the shop and on product pages. Display only: your "
 "payment provider decides the real instalments."
 msgstr ""
-"Aparecem embaixo do preço na loja e na página do produto. É só informativo: "
-"as parcelas reais são definidas pelo seu meio de pagamento."
+"Se muestran debajo del precio en la tienda y en la página del producto. Es "
+"solo informativo: las cuotas reales las define tu medio de pago."
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:49
 msgid "Maximum instalments"
-msgstr "Máximo de parcelas"
+msgstr "Máximo de cuotas"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:50
 msgid "0 hides the instalments."
-msgstr "0 esconde as parcelas."
+msgstr "0 oculta las cuotas."
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:56
 msgid "Interest-free up to"
-msgstr "Sem juros até"
+msgstr "Sin interés hasta"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:57
 msgid "Number of instalments without interest."
-msgstr "Quantidade de parcelas sem juros."
+msgstr "Cantidad de cuotas sin interés."
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:63
 msgid "Monthly interest (%)"
-msgstr "Juros ao mês (%)"
+msgstr "Interés mensual (%)"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:64
 msgid "Used when the maximum is above the interest-free instalments."
-msgstr "Usado quando o máximo passa das parcelas sem juros."
+msgstr "Se usa cuando el máximo supera las cuotas sin interés."
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:70
 msgid "Minimum instalment value"
-msgstr "Valor mínimo da parcela"
+msgstr "Valor mínimo de cada cuota"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:71
 msgid ""
 "Fewer instalments are shown so that each one is at least this amount. 0 for "
 "no minimum."
 msgstr ""
-"Menos parcelas são mostradas para que cada uma seja pelo menos este valor. 0"
-" para não ter mínimo."
+"Se muestran menos cuotas para que cada una sea al menos este monto. 0 para "
+"no tener mínimo."
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:77
 msgid "Interest-free text"
-msgstr "Texto sem juros"
+msgstr "Texto sin interés"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:78
 #: includes/pro/class-tax-id-checkout-pro-installments.php:85
 msgid "Tags: {count} {amount}"
-msgstr "Tags: {count} {amount}"
+msgstr "Etiquetas: {count} {amount}"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:79
 msgid "or {count} × {amount} interest-free"
-msgstr "ou {count}x de {amount} sem juros"
+msgstr "o {count} cuotas de {amount} sin interés"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:84
 msgid "Text with interest"
-msgstr "Texto com juros"
+msgstr "Texto con interés"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:86
 msgid "or up to {count} × {amount}"
-msgstr "ou até {count}x de {amount}"
+msgstr "o hasta {count} cuotas de {amount}"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:91
 msgid "Discounted price text"
-msgstr "Texto do preço com desconto"
+msgstr "Texto del precio con descuento"
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:92
 msgid ""
 "Shown when a payment method discount is set. Tags: {price} {method} "
 "{percent}. Leave empty to hide."
 msgstr ""
-"Aparece quando há desconto por forma de pagamento. Tags: {price} {method} "
-"{percent}. Deixe vazio para esconder."
+"Se muestra cuando hay un descuento por método de pago. Etiquetas: {price} "
+"{method} {percent}. Déjalo vacío para ocultarlo."
 
 #: includes/pro/class-tax-id-checkout-pro-installments.php:93
 msgid "{price} with {method}"
-msgstr "{price} com {method}"
+msgstr "{price} con {method}"
 
 #: includes/pro/class-tax-id-checkout-pro-lookup.php:44
 msgid "Company lookup (Pro)"
-msgstr "Consulta de empresa (Pro)"
+msgstr "Búsqueda de empresa (Pro)"
 
 #: includes/pro/class-tax-id-checkout-pro-lookup.php:59
 msgid "Company lookup"
-msgstr "Consulta de empresa"
+msgstr "Búsqueda de empresa"
 
 #: includes/pro/class-tax-id-checkout-pro-lookup.php:60
 msgid ""
 "Fill in the company name and address from a CNPJ (Brazil) or EU VAT number"
 msgstr ""
-"Preencher a razão social e o endereço a partir de um CNPJ ou de um número de"
-" IVA da UE"
+"Completar la razón social y la dirección a partir de un CNPJ (Brasil) o un "
+"número de IVA de la UE"
 
 #: includes/pro/class-tax-id-checkout-pro-lookup.php:61
 msgid ""
 "Uses BrasilAPI for CNPJ and the European Commission's VIES service for VAT "
 "numbers. Answers are cached for 7 days."
 msgstr ""
-"Usa a BrasilAPI para CNPJ e o serviço VIES da Comissão Europeia para números"
-" de IVA. As respostas ficam guardadas por 7 dias."
+"Usa BrasilAPI para el CNPJ y el servicio VIES de la Comisión Europea para "
+"los números de IVA. Las respuestas se guardan 7 días."
 
 #: includes/pro/class-tax-id-checkout-pro-lookup.php:67
 msgid "Check EU VAT numbers"
-msgstr "Verificar números de IVA da UE"
+msgstr "Verificar números de IVA de la UE"
 
 #: includes/pro/class-tax-id-checkout-pro-lookup.php:68
 msgid "Reject VAT numbers that VIES reports as not registered"
-msgstr "Recusar números de IVA que o VIES informa como não registrados"
+msgstr "Rechazar los números de IVA que VIES informa como no registrados"
 
 #: includes/pro/class-tax-id-checkout-pro-lookup.php:69
 msgid "When VIES is down the number is accepted, so no order is lost."
-msgstr ""
-"Se o VIES estiver fora do ar, o número é aceito para não perder pedidos."
+msgstr "Si VIES no responde, el número se acepta para no perder pedidos."
 
 #: includes/pro/class-tax-id-checkout-pro-lookup.php:278
 msgid ""
 "This VAT number is not registered in the EU VIES system. Please check it, or"
 " leave the field empty to buy without it."
 msgstr ""
-"Este número de IVA não está registrado no sistema VIES da UE. Confira ou "
-"deixe o campo vazio para comprar sem ele."
+"Este número de IVA no está registrado en el sistema VIES de la UE. Revísalo "
+"o deja el campo vacío para comprar sin él."

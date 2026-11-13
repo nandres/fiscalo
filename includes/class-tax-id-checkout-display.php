@@ -40,17 +40,17 @@ class Tax_ID_Checkout_Display {
 	 */
 	public static function admin_billing_fields( $fields, $order = null ) {
 		$fields['tax_id'] = array(
-			'label' => $order instanceof WC_Order ? Tax_ID_Checkout_Data::order_label( $order ) : __( 'Tax ID', 'fiscalo' ),
+			'label' => $order instanceof WC_Order ? Tax_ID_Checkout_Data::order_label( $order ) : __( 'Tax ID', 'cedulio' ),
 			'show'  => false,
 		);
 		if ( $order instanceof WC_Order && 'yes' === $order->get_meta( '_billing_invoice' ) ) {
 			$fields['invoice'] = array(
-				'label'   => __( 'Invoice requested', 'fiscalo' ),
+				'label'   => __( 'Invoice requested', 'cedulio' ),
 				'show'    => true,
 				'type'    => 'select',
 				'options' => array(
-					'yes' => __( 'Yes', 'fiscalo' ),
-					'no'  => __( 'No', 'fiscalo' ),
+					'yes' => __( 'Yes', 'cedulio' ),
+					'no'  => __( 'No', 'cedulio' ),
 				),
 			);
 		}
@@ -79,13 +79,13 @@ class Tax_ID_Checkout_Display {
 			$out[ $key ] = $field;
 			if ( 'address_1' === $key ) {
 				$out['number'] = array(
-					'label' => __( 'House number', 'fiscalo' ),
+					'label' => __( 'House number', 'cedulio' ),
 					'show'  => false,
 				);
 			}
 			if ( 'address_2' === $key ) {
 				$out['neighborhood'] = array(
-					'label' => __( 'Neighborhood', 'fiscalo' ),
+					'label' => __( 'Neighborhood', 'cedulio' ),
 					'show'  => false,
 				);
 			}
@@ -116,9 +116,9 @@ class Tax_ID_Checkout_Display {
 	 */
 	public static function profile_fields( $fields ) {
 		$extras = array(
-			'billing_number'       => __( 'House number', 'fiscalo' ),
-			'billing_neighborhood' => __( 'Neighborhood', 'fiscalo' ),
-			'billing_tax_id'       => __( 'Tax ID', 'fiscalo' ),
+			'billing_number'       => __( 'House number', 'cedulio' ),
+			'billing_neighborhood' => __( 'Neighborhood', 'cedulio' ),
+			'billing_tax_id'       => __( 'Tax ID', 'cedulio' ),
 		);
 		foreach ( $extras as $key => $label ) {
 			$fields['billing']['fields'][ $key ] = array(
@@ -127,11 +127,11 @@ class Tax_ID_Checkout_Display {
 			);
 		}
 		$fields['shipping']['fields']['shipping_number']       = array(
-			'label'       => __( 'House number', 'fiscalo' ),
+			'label'       => __( 'House number', 'cedulio' ),
 			'description' => '',
 		);
 		$fields['shipping']['fields']['shipping_neighborhood'] = array(
-			'label'       => __( 'Neighborhood', 'fiscalo' ),
+			'label'       => __( 'Neighborhood', 'cedulio' ),
 			'description' => '',
 		);
 		return $fields;

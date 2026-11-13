@@ -63,12 +63,12 @@ class Tax_ID_Checkout_Data {
 
 		if ( '' === trim( (string) $value ) ) {
 			/* translators: %s: field name, e.g. "CPF or CNPJ". */
-			return self::is_required( $country, $invoice ) ? sprintf( __( '%s is a required field.', 'fiscalo' ), '<strong>' . esc_html( $label ) . '</strong>' ) : '';
+			return self::is_required( $country, $invoice ) ? sprintf( __( '%s is a required field.', 'cedulio' ), '<strong>' . esc_html( $label ) . '</strong>' ) : '';
 		}
 
 		if ( ! self::check( $country, $value )['valid'] ) {
 			/* translators: %s: field name, e.g. "CPF or CNPJ". */
-			return sprintf( __( 'The %s you entered is not valid. Please check the number.', 'fiscalo' ), '<strong>' . esc_html( $label ) . '</strong>' );
+			return sprintf( __( 'The %s you entered is not valid. Please check the number.', 'cedulio' ), '<strong>' . esc_html( $label ) . '</strong>' );
 		}
 
 		return '';
@@ -239,7 +239,7 @@ class Tax_ID_Checkout_Data {
 			'cif'  => 'CIF',
 			'cf'   => 'Codice fiscale',
 			'piva' => 'Partita IVA',
-			'vat'  => __( 'VAT number', 'fiscalo' ),
+			'vat'  => __( 'VAT number', 'cedulio' ),
 		);
 		if ( isset( $labels[ $type ] ) ) {
 			return $labels[ $type ];

@@ -69,7 +69,7 @@ final class Tax_ID_Checkout {
 	 */
 	public function load_translations() {
 		$locale = determine_locale();
-		$file   = TAX_ID_CHECKOUT_DIR . 'languages/fiscalo-' . $locale . '.mo';
+		$file   = TAX_ID_CHECKOUT_DIR . 'languages/cedulio-' . $locale . '.mo';
 
 		if ( ! file_exists( $file ) ) {
 			$fallbacks = array(
@@ -78,12 +78,12 @@ final class Tax_ID_Checkout {
 			);
 			$language  = substr( $locale, 0, 2 );
 			if ( isset( $fallbacks[ $language ] ) ) {
-				$file = TAX_ID_CHECKOUT_DIR . 'languages/fiscalo-' . $fallbacks[ $language ] . '.mo';
+				$file = TAX_ID_CHECKOUT_DIR . 'languages/cedulio-' . $fallbacks[ $language ] . '.mo';
 			}
 		}
 
 		if ( file_exists( $file ) ) {
-			load_textdomain( 'fiscalo', $file );
+			load_textdomain( 'cedulio', $file );
 		}
 	}
 
@@ -112,6 +112,6 @@ final class Tax_ID_Checkout {
 		if ( ! current_user_can( 'activate_plugins' ) ) {
 			return;
 		}
-		echo '<div class="notice notice-error"><p>' . esc_html__( 'Fiscalo needs WooCommerce to be installed and active.', 'fiscalo' ) . '</p></div>';
+		echo '<div class="notice notice-error"><p>' . esc_html__( 'Cedulio needs WooCommerce to be installed and active.', 'cedulio' ) . '</p></div>';
 	}
 }
